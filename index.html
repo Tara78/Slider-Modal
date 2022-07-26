@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="  https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+  <title>My Landing Page</title>
+</head>
+<body>
+<nav>
+  <div class="logo">
+    <img src="https://randomuser.me/api/portraits/med/women/6.jpg" alt="user">
+  </div>
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Portfolio</a></li>
+    <li><a href="#">Blog</a></li>
+    <li><a href="#">Contact Me</a></li>
+  </ul>
+</nav>
+<header>
+  <button id="toggle" class="toggle">
+    <i class="fa fa-bars fa-2x"></i>
+  </button>
+  <h1>My Landing Page</h1>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit!</p>
+  <button class="cta-btn" id="open">Sign Up</button>
+  </header>
+
+  <div class="container">
+    <h2>What is this Landing page about</h2>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui cum modi sed ea harum ab laborum ullam explicabo deserunt dicta?</p>
+
+    <h2>Tell Me More</h2>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, praesentium cum facere accusantium maxime doloribus quia aliquam atque nihil vitae at, eveniet sunt veritatis, exercitationem facilis. Maiores commodi deserunt voluptate.</p>
+
+    <h2>Benefits</h2>
+    <ul>
+      <li>Lifetime Access</li>
+      <li>30 Days Money Back</li>
+      <li>Tailored Customer Support</li>
+    </ul>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal-container" id="modal">
+    <div class="modal">
+      <button class="btn" id="close">
+        <i class="fa fa-times"></i>
+      </button>
+      <div class="modal-header">
+        <h3>Sign Up</h3>
+      </div>
+      <div class="modal-content">
+        <p>Register with us to get Offers, Support and more</p>
+        <form class="modal-form">
+      <div>
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="Enter name">
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input type="text" id="name" placeholder="Enter email adress">
+      </div>
+      <div>
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter password"> 
+     </div>
+      <div>
+        <label for="password2">Confirm Password</label>
+        <input type="password" id="password2" placeholder="Confirm Password">
+      </div>
+      <input type="submit" value="Submit" class="submit-btn">
+        </form>
+
+      </div>
+    </div>
+    </div>
+
+<script src="app.js"></script>
+</body>
+</html>
