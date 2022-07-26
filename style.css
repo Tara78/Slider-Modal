@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,300&family=Nunito:ital,wght@0,200;0,300;1,500&family=Open+Sans:ital,wght@0,300;1,400&display=swap');
 
 :root{
-  --modal-durations:1s;
+  --modal-durations:2s;
   --primary-color:#30336b;
   --secondary-color:#be2edd;
 }
@@ -13,6 +13,11 @@
 body{
   font-family:'Lato', sans-serif;
   margin:0;
+  transition:transform 0.3sec ease ;
+}
+body.show-nav{
+  /*width of the nav should match with width of nav (both same px)*/
+  transform: translateX(300px);
 }
 nav{
   background-color:var(--primary-color);
@@ -21,7 +26,7 @@ nav{
   position:fixed;
   top: 0;
   left: 0;
-  width: 200px;
+  width: 300px;
   height: 100vh;
   z-index: 100;
   transform: translateX(-100%);
@@ -118,6 +123,11 @@ nav .logo img{
     right: 0;
     left: 0;
    }
+
+   .modal-container.show-modal{
+    display:block;
+    }
+
    .modal{
     background-color:#fff;
     border-radius: 5px;
@@ -130,7 +140,8 @@ nav .logo img{
     transform:translate(-50%, -50%);
     max-width: 100%;
     width: 400px;
-  
+    animation-name: modalopen;
+    animation-duration:var(--modal-durations)
    }
 
    .modal-header{
@@ -140,7 +151,7 @@ nav .logo img{
    }
    .modal-header h3{
     margin:0; 
-    border-bottom: 1px solid #333;
+    /* border-bottom: 1px solid #333; */
     }
 
    .modal-content{
@@ -165,4 +176,13 @@ nav .logo img{
     position:absolute;
     top:0;
     right: 0;
+   }
+
+   @keyframes modalopen{
+    /*from inviable to fully visable slowly which depends on the var */
+    from {opacity:0;
+    }
+    to{
+      opacity:1;
+    }
    }
